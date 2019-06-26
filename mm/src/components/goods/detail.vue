@@ -85,9 +85,6 @@ import qs from 'qs'
 import axios from 'axios'
 import BScroll from 'better-scroll'
 import Vue from 'vue'
-// import shopcart from '../shopcart/shopcart'
-// import {formatDate} from '../../common/js/date'
-// import cartcontrol from '../cartcontrol/cartcontrol.vue'
 import split from '../split/split.vue';
 import ratingselect from '../ratingselect/ratingselect.vue'
 

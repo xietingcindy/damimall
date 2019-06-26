@@ -24,10 +24,14 @@ import about from './components/user/about'
 import rate from './components/user/rate'
 import collect from './components/user/collect'
 import address from './components/user/address'
+import addAddress from './components/user/add-address'
+import editAddress from './components/user/edit-address'
+import area from './components/user/area'
 import update from './components/user/update'
 import register from './components/user/register'
 import cart from './components/shopcart/cart'
 import "./common/stylus/index.styl"
+
 
 
 // Vue.use(AV);
@@ -61,7 +65,7 @@ const routes = [
     //     path:'user/login',
     //     component:login
     //   }
-    // ],t
+    // ],
   },
   {path:'/login',component:login},
   { path: '/register', component: register },
@@ -70,6 +74,9 @@ const routes = [
   { path: '/update', component: update },
   { path: '/collect', component: collect },
   { path: '/address', component: address },
+  { path: '/add-address', component: addAddress },
+  { path: '/edit-address', component: editAddress },
+  { path: '/area', component: area},
 ]
 
 // 3. 创建 router 实例，然后传 `routes` 配置

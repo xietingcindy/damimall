@@ -71,7 +71,7 @@ export default {
     methods:{
         onSubmit(){
             const that=this;
-             this.$axios({
+            this.$axios({
                 url: '/api/api/v1/user/login',
                 method: 'post',
                 data: {

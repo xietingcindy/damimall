@@ -27,8 +27,6 @@
 </template>
 
 <script>
-
-
 const ERR_OK=0;
 export default {
   // name: 'App',
@@ -52,9 +50,11 @@ export default {
           }
         });  
   },
-  components: {
-  //  'v-header':header,
-  }
+ 
+  components: { 
+
+   }
+
 }
 </script>
 

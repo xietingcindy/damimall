@@ -14,9 +14,7 @@
             </ul>
             
         </div>
-        <div class="foot">
-
-        </div>
+        <div class="foot"></div>
     </div>
 </template>
 

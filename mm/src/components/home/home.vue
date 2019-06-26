@@ -1,7 +1,7 @@
 <template>
 <div class="home">
     <div class="head" height="188" width="375">
-        <v-header :scrollpics="scrollpic"></v-header>
+        <v-header :scrollpics="scrollpics"></v-header>
     </div>
        <div class="good-wrapper">        
         <div class="line"></div>
@@ -68,7 +68,15 @@ import header from '../header/header'
 import detail from '../goods/detail'
 let ERR_OK=0;
 export default {
-     props:['scrollpic'],
+     props:{
+         scrollpic:{
+            type:Object,
+             default(){
+                return {};
+            }
+         }
+     },
+         
      data () {
       return {
         count: 0,
@@ -91,7 +99,7 @@ export default {
       },
     },
     created(){
-          this.$http.get('/api/api/v1/content/hot/1184').then(response => {
+          this.$axios.get('/api/api/v1/content/hot/1184').then(response => {
         // console.log(response);    
             this.goods=response.data.data;
             console.log(this.goods);
@@ -105,10 +113,15 @@ export default {
             response=response.data.data
             // console.log(response)
             this.recpic=response;
-            // console.log(this.recpic[0].pic)    
-
-          
+            // console.log(this.recpic[0].pic)       
         });   
+         this.$axios.get('/api/api/v1/content/89').then(response => {
+        // console.log(response);
+            response=response.data.data
+            // console.log(response)
+            this.scrollpics=response;
+            console.log(this.scrollpics);       
+        }); 
     },
     components:{
         'v-header':header,
